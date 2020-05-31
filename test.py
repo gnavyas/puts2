@@ -76,9 +76,12 @@ class TestCalculator(unittest.TestCase):#unittest module provides a set of tools
 		self.assertEqual(b"None", solution.data)
 
     def test_sub1(self):
+
 		#case 1, A is n integer B is an integer
 		solution = self.app.get('/sub?A=10&B=2')
 		self.assertEqual(b'8.0', solution.data)
+    
+    
 
 	def test_sub2(self):
 
@@ -143,9 +146,11 @@ class TestCalculator(unittest.TestCase):#unittest module provides a set of tools
 		self.assertEqual(b"None", solution.data)
 
     def test_mul1(self):
+
 		#case 1, A is n integer B is an integer
 		solution = self.app.get('/mul?A=40&B=6')
 		self.assertEqual(b'240.0', solution.data)
+    
 
 	def test_mul2(self):
 
