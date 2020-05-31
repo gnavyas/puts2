@@ -144,10 +144,10 @@ class TestCalculator(unittest.TestCase):#unittest module provides a set of tools
 		#case 11, when A input is any number and B=p/q form where q=0
 		solution = self.app.get('sub?A=57&B=400/0')
 		self.assertEqual(b"None", solution.data)
+    
+    def test_mul1(self):   
 
-    def test_mul1(self):
-
-		#case 1, A is n integer B is an integer
+       	#case 1, A is n integer B is an integer
 		solution = self.app.get('/mul?A=40&B=6')
 		self.assertEqual(b'240.0', solution.data)
     
