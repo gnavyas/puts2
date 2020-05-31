@@ -180,13 +180,13 @@ class TestCalculator(unittest.TestCase):#unittest module provides a set of tools
 
 		#case 6, when A is fraction p/q and B is an integer
 		solution = self.app.get('/mul?A=11/1&B=99')
-		self.assertEqual(b'1089', solution.data)
+		self.assertEqual(b'1089.0', solution.data)
 
 	def test_mul7(self):
 
 		#case 7, when A is an integer and B is a fraction p/q
 		solution = self.app.get('/mul?A=23&B=9/13')
-		self.assertEqual(b'15.9230769231', solution.data)
+		self.assertEqual(b'15.923076923076923', solution.data)
 
 	def test_mul8(self):
 
@@ -223,25 +223,25 @@ class TestCalculator(unittest.TestCase):#unittest module provides a set of tools
 
 		#case 2, A is rational number and B is rational number p/q form
 		solution = self.app.get('/div?A=3/2&B=22/4')
-		self.assertEqual(b'0.272727272727', solution.data)
+		self.assertEqual(b'0.2727272727272727', solution.data)
 
 	def test_div3(self):
 
 		#case 3, A is a float and B is a float
 		solution = self.app.get('/div?A=0.69&B=158.2')
-		self.assertEqual(b'0.0043615676', solution.data)
+		self.assertEqual(b'0.004361567635903919', solution.data)
 
 	def test_div4(self):
 
 		#case 4, when A is float and B is integer
 		solution = self.app.get('/div?A=22.1&B=66')
-		self.assertEqual(b'0.3348484848', solution.data)
+		self.assertEqual(b'0.33484848484848484', solution.data)
 
 	def test_div5(self):
 
 		#case 5, when A is integer and B is float
 		solution = self.app.get('/div?A=20&B=1.1')
-		self.assertEqual(b'18.1818181818', solution.data)
+		self.assertEqual(b'18.181818181818183', solution.data)
 
 	def test_div6(self):
 
