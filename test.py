@@ -75,14 +75,14 @@ class TestCalculator(unittest.TestCase):#unittest module provides a set of tools
 		solution = self.app.get('add?A=89&B=557/0')
 		self.assertEqual(b"None", solution.data)
 
+    
     def test_sub1(self):
 
 		#case 1, A is n integer B is an integer
 		solution = self.app.get('/sub?A=10&B=2')
 		self.assertEqual(b'8.0', solution.data)
-    
-    
 
+		
 	def test_sub2(self):
 
 		#case 2, A is rational number and B is rational number p/q form
